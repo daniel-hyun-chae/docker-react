@@ -10,7 +10,7 @@ before_install:
 
 #Tell Travis how to run our test suite
 script:
-  - docker run danielhyunchae/docker-react npm run test -- --coverage
+  - docker run -e CI=true danielhyunchae/docker-react npm run test -- --coverage
 
 #Tell travis how to deploy our code to AWS
 deploy:
